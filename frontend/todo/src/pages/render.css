@@ -1,0 +1,63 @@
+#search{
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+.search{
+    position: relative;
+    margin-top: 40px;
+}
+.search_icon{
+    position: absolute;
+    left:73%;
+    top:25%;
+    cursor: pointer;
+    
+}
+table{
+    width: 90%;
+    margin: auto;
+    border-spacing: 1rem;
+}
+tr,th,td{
+    /* border: 1px solid red; */
+    border-collapse: collapse;
+    border-radius: 10px;
+
+   
+}
+
+th{
+    height: 30px;
+}
+/* td{
+    text-align: left;
+} */
+th{
+    background-color: blue;
+    color:white;
+
+    /* border: 2px solid red; */
+}
+tr{
+    background-color: aqua;
+    padding: 10px;
+    margin-top: 50px;
+
+    /* border: 2px solid red; */
+}
+.del{
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    color:white;
+}
+.toggle{
+    border: none;
+  background: transparent;
+cursor: pointer;
+}

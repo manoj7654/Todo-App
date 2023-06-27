@@ -1,0 +1,7 @@
+.home{
+    height: 600px;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-image: url("https://images.pexels.com/photos/5717411/pexels-photo-5717411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+}
