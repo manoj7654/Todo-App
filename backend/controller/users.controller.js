@@ -23,12 +23,12 @@ const {name,email,password}=req.body
            }else{
             const user=new UserModal({name,email,password:secure_password});
             await user.save();
-            res.json({"message":"Registration successfully"})
+            res.status(201).json({"message":"Account Created successfully"})
            }
         });
     } catch (err) {
         console.log(err);
-        console.log({"message":"Something went wrong"})
+        res.status(500).json({"message":"Getting error while creating account"})
     }
 };
 
@@ -44,21 +44,18 @@ const {email,password}=req.body;
         if(user.length>0){
             bcrypt.compare(password, user[0].password, (err, result)=> {
                 if(result){
-                    
                     const token=jwt.sign({userID:user[0]._id},process.env.key );
-                    
-                    
-                    res.json({"token":token,"name":user[0].name,"message":"Login Successfuly"})
+                    res.status(201).json({"token":token,"name":user[0].name,"message":"Login Successfuly"})
                 }else{
-                    res.json({"message":"Wrong credential"})
+                    res.status(401).json({"message":"Wrong credential"})
                 }
             });
         }else{
-            res.json("Wrong credential")
+            res.status(401).json("Wrong credential")
         }
     } catch (err) {
         console.log(err);
-         console.log({"err":"Something went wrong"})
+         res.status(500).json({"err":"Getting err while loging"})
     }
 };
 
