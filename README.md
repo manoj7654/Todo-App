@@ -230,6 +230,20 @@ Additional Notes
 * Styling is done using CSS and inline styles in the components.
 The application is responsive and works well on different screen sizes.
 
+Home page
+![Uploading Screenshot (529).png…]()
+
+Add Todo
+![Screenshot (531)](https://github.com/manoj7654/Todo-App/assets/107467981/19c643bc-8536-490a-9d91-d596d49a9a08)
+
+Todo List 
+![Screenshot (532)](https://github.com/manoj7654/Todo-App/assets/107467981/fa0be36c-2430-41f2-89e6-a930660e54e1)
+
+Resgister
+![Screenshot (533)](https://github.com/manoj7654/Todo-App/assets/107467981/869f9ef8-a1e2-4e65-800b-e58562019caf)
+
+Login
+![Screenshot (534)](https://github.com/manoj7654/Todo-App/assets/107467981/eb6a0267-2928-468f-8f14-bc2ad2cfc801)
 
 
 # Deployment Link
