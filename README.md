@@ -1,6 +1,7 @@
 # Todo-App
 A Todo app is a simple and intuitive application designed to help users organize and manage their tasks and to-do lists effectively. It provides a user-friendly interface that allows users to create, update, and track their tasks easily.
 
+# For Backend
 # Prerequisites
 Before running the application, make sure you have the following installed:
 
@@ -141,6 +142,94 @@ The application uses MongoDB as the database. The connection to the database is 
 * CORS is enabled in the application to allow cross-origin requests.
 * The API follows RESTful principles and returns JSON responses.
 * Error handling is implemented for various scenarios, including validation errors and server errors.
+
+
+# For Front End
+
+## Create React app using command
+
+       npx creat-reac-app Todo-App
+
+## Go to app
+  
+     cd todo
+
+## Start application 
+
+    npm start
+
+## Dependecies
+
+        "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+
+
+## Structure
+The project is organized into the following folders:
+
+* src/pages: Contains the main pages of the application.
+
+* src/components: Contains reusable components used in the pages.
+
+* src/App.js: The entry point of the application.
+
+* src/index.js: Renders the root component and mounts it to the DOM.
+ 
+
+
+## Components
+The following reusable components are available in the src/components folder:
+
+* Header: Displays the application header.
+
+* TodoForm: Renders a form for adding and updating todos.
+* TodoList: Renders the list of todos.
+
+* TodoItem: Displays an individual todo item.
+
+* LoadingIndicator: Shows a loading spinner while fetching data from the API.
+
+* ErrorIndicator: Displays an error message if there is a problem with API requests.
+## Pages
+The main pages of the application are located in the src/pages folder:
+
+* HomePage: Displays the list of todos.
+
+* AddTodoPage: Provides a form for adding a new todo.
+* EditTodoPage: Allows editing status an existing todo.
+
+
+## API Integration
+The application communicates with a RESTful API to perform CRUD operations on todos. The API endpoints used are as follows:
+
+* GET /todos: Retrieves all todos.
+* POST /todos: Adds a new todo.
+* PUT /todos/:id: Updates an existing todo.
+* DELETE /todos/:id: Deletes a todo.
+The API integration is handled in the respective page components.
+
+## Loading and Error Indicators
+The application includes loading and error indicators to provide feedback to the user during API requests:
+
+`Loading`
+* The LoadingIndicator component shows a loading spinner while fetching data from the API. It is displayed when data is being loaded from the server.
+
+`Error`
+* The ErrorIndicator component displays an error message if there is a problem with API requests. It is shown when an error occurs during API communication.
+Additional Notes
+
+`Style`
+* Styling is done using CSS and inline styles in the components.
+The application is responsive and works well on different screen sizes.
+
 
 
 # Deployment Link
