@@ -231,7 +231,7 @@ Additional Notes
 The application is responsive and works well on different screen sizes.
 
 Home page
-![Uploading Screenshot (529).png…]()
+![Screenshot (530)](https://github.com/manoj7654/Todo-App/assets/107467981/3212260c-4eec-4354-b1b6-541b36b76a92)
 
 Add Todo
 ![Screenshot (531)](https://github.com/manoj7654/Todo-App/assets/107467981/19c643bc-8536-490a-9d91-d596d49a9a08)
