@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import "./addTodo.css"
+
+const token=localStorage.getItem("token")
 const AddTodo = ({add}) => {
   const [text,setText]=useState({title:"",description:"",status:false})
   const handleChange=(e)=>{
@@ -8,10 +10,30 @@ const AddTodo = ({add}) => {
     setText({...text,[e.target.name]:e.target.value})
   }
 
-  const addTodo=()=>{
-  // handleAdd(text)
-  // add(text)
-  console.log(text)
+  const addTodo=async()=>{
+  // 
+  
+  try {
+    const result=await fetch("https://inquisitive-sundress-foal.cyclic.app/todos/add",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+        Authorization:`${token}`
+      },
+      body:JSON.stringify(text)
+    })
+    const res=await result.json();
+    console.log(res);
+    if(result.ok){
+      alert(res.message)
+      setText(res)
+    }else{
+      alert(res.message)
+    }
+  } catch (error) {
+    console.log(error)
+  }
+
   setText("")
   }
 

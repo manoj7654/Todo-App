@@ -11,6 +11,7 @@
     background-color: blue;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 .dis{
     width: 40px;

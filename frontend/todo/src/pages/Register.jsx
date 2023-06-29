@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {redirect} from "react-router-dom"
 import "./register.css"
 const Register = (e) => {
 const [register,setRegister]=useState({name:"",email:"",password:""})
@@ -8,7 +9,7 @@ const handleChange=(e)=>{
   const handleSubmit=async(e)=>{
    e.preventDefault()
     try {
-       const result=await fetch("http://localhost:4500/users/register",{
+       const result=await fetch("https://inquisitive-sundress-foal.cyclic.app/users/register",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -19,6 +20,7 @@ const handleChange=(e)=>{
        const res=await result.json();
        if(result.ok){
         alert(res.message)
+        // <redirect to="/login" />
        }else{
         alert(res.message)
        }
