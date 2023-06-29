@@ -15,7 +15,7 @@ const {name,email,password}=req.body
     }
         const check=await UserModal.find({email})
         if(check.length>0){
-            return res.json({"message":"User already exist"})
+            return res.status(400).json({"message":"User already exist"})
         }
         bcrypt.hash(password, 5, async(err, secure_password)=> {
            if(err){
@@ -44,10 +44,10 @@ const {email,password}=req.body;
         if(user.length>0){
             bcrypt.compare(password, user[0].password, (err, result)=> {
                 if(result){
-                    const token=jwt.sign({userID:user[0]._id},process.env.key );
+                    const token=jwt.sign({userId:user[0]._id},process.env.key );
                     res.status(201).json({"token":token,"name":user[0].name,"message":"Login Successfuly"})
                 }else{
-                    res.status(401).json({"message":"Wrong credential"})
+                    res.status(401).json({"message":"Either email or password mistmatch"})
                 }
             });
         }else{
